@@ -1,0 +1,102 @@
+.figure-progress {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    color: red;
+    
+}
+
+.__wrap {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    will-change: transform;
+}
+  
+.__px {
+    position: absolute;
+    background: currentColor;
+    min-width: 2px;
+    min-height: 2px;
+}
+
+.__px:nth-child(1),
+.__px:nth-child(25),
+.__px:nth-child(26),
+.__px:nth-child(50),
+.__px:nth-child(51),
+.__px:nth-child(75),
+.__px:nth-child(76) {
+    transform: scale(4);
+    border-radius: 50%;
+}
+
+.__px:nth-child(1) {
+    transform-origin: 0 0;
+}
+
+.__px:nth-child(25),
+.__px:nth-child(26) {
+    transform-origin: 100% 0px;
+}
+
+.__px:nth-child(50),
+.__px:nth-child(51) {
+    transform-origin: 100% 100%;
+}
+
+.__px:nth-child(75),
+.__px:nth-child(76) {
+    transform-origin: 0 100%;
+}
+
+.__pointer {
+    position: absolute;
+    z-index: 2;
+    transform: scale(3);
+    box-shadow: 0 0 3px;
+    border-radius: 50px;
+    aspect-ratio: 1 / 1;
+    height: auto!important;
+    background-color: currentColor;
+}
+
+/* ///////////////////////////////////////////////// */
+
+.picture {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+}
+
+.picture__progress {
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.picture__img-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    border-radius: inherit;
+}
+
+.picture__pic {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+* {
+    box-sizing: border-box;
+}
